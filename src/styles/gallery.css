@@ -1,0 +1,108 @@
+#galeria {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#galeria h1 {
+  font-family: "Sentient", sans-serif;
+  font-weight: 200;
+  font-size: 50px;
+  color: #242424;
+  letter-spacing: 1px;
+}
+
+#galeria p {
+  font-style: italic;
+  font-weight: 400;
+  color: #242424;
+}
+
+.g-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 15px;
+  gap: 30px;
+  width: 90%;
+  border-top: 1px solid #b98a54;
+  border-bottom: 1px solid #b98a54;
+  position: relative;
+}
+
+.g-container-img {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 100%;
+}
+
+.g-i {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, filter 0.3s ease; /* Añadimos transición para el blur */
+}
+
+.g-i:hover {
+  transform: scale(1.03);
+}
+
+/* Efecto blur en las imágenes hermanas cuando una está en hover */
+.g-container-img .g-i:not(:hover) {
+  opacity: 0.9; /* Desenfoque de 3px por defecto */
+}
+
+.g-container-img .g-i:hover {
+  filter: none; /* La imagen en hover y las siguientes permanecen nítidas */
+}
+
+.g-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.g-button button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 120px;
+  border: 1px solid #242424;
+  border-radius: 20px;
+  background: none;
+  color: #242424;
+  cursor: pointer;
+  font-size: 15px;
+  gap: 10px;
+  font-weight: 500;
+  transition: transform 0.3s ease-in-out;
+}
+
+.g-button button:hover {
+  transform: translateY(-5px);
+  background: #b98a54;
+  border: 1px solid #b98a54;
+  color: #ffffff;
+}
+
+.carrusel {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .carrusel {
+    display: flex;
+  }
+
+  .g-container-img {
+    display: none;
+  }
+}

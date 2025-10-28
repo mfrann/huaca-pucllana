@@ -1,0 +1,204 @@
+/* === SECCIÓN PRINCIPAL === */
+.h-main-container {
+  position: relative;
+  height: 100vh;
+  background: url("../public/assets/back.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* === EFECTO DE SOMBRA / OVERLAY === */
+.h-main-container .overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+/* === HEADER === */
+.h-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  transition: all 0.4s ease;
+  z-index: 3;
+  background: transparent;
+  gap: 150px;
+}
+
+/* === HEADER SCROLLED === */
+.h-container.scrolled {
+  background-color: #ffffff;
+  color: #242424;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.13);
+}
+
+.h-container.scrolled a {
+  color: #242424;
+}
+
+.h-container img {
+  height: 100px;
+  object-fit: contain;
+  transition: opacity 0.4s ease;
+  content: url("../public/assets/logo.png");
+  z-index: 10;
+}
+
+.h-container.scrolled img {
+  content: url("../public/assets/logo2.png");
+}
+
+.h-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.h-navbar a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+  letter-spacing: 1px;
+  font-weight: 5 00;
+  padding: 2px;
+  font-size: 13px;
+  font-family: "Sentient", sans-serif;
+}
+
+.h-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: none;
+  font-size: 18px;
+  border-radius: 100%;
+  margin-bottom: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+}
+
+.h-button:hover {
+  background: white;
+  color: #242424;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 20;
+}
+
+/* Animación cuando está abierto (cerrar icono) */
+.menu-toggle.open {
+  animation: rotateIn 0.4s forwards;
+}
+
+/* Animación cuando está cerrado (hamburguesa icono) */
+.menu-toggle.close {
+  animation: rotateOut 0.4s forwards;
+}
+
+/* Definición de keyframes */
+@keyframes rotateIn {
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateOut {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .h-container {
+    justify-content: space-between;
+    width: 92%;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  /* Menú deslizable desde la derecha */
+  .h-navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    width: 200px;
+    padding: 60px 20px 20px 20px;
+    gap: 15px;
+    box-shadow: -2px 0 12px rgba(0, 0, 0, 0.1);
+
+    transform: translateX(100%); /* fuera de pantalla */
+    transition: transform 0.3s ease;
+    max-height: 100vh;
+    overflow-y: auto;
+    color: #242424;
+    z-index: 15;
+    display: flex;
+  }
+
+  .h-navbar.active {
+    transform: translateX(0); /* visible */
+  }
+
+  .h-navbar a {
+    color: #242424;
+    font-weight: 300;
+    padding: 12px;
+    border-bottom: 1px solid #24242452;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    z-index: 20;
+  }
+
+  .menu-toggle.open {
+    color: #242424;
+  }
+}

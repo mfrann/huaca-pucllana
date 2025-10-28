@@ -1,0 +1,87 @@
+.c-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.c-wrapper {
+  overflow: hidden;
+}
+
+.c-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.c-slide {
+  min-width: 100%;
+}
+
+.c-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.c-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  top: 50%;
+  z-index: 10;
+  position: absolute;
+  border: none;
+  padding: 10px;
+  width: 35px;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.c-btn:hover {
+  background: white;
+  color: #242424;
+}
+
+.c-btn.prev {
+  left: 15px;
+}
+
+.c-btn.next {
+  right: 15px;
+}
+
+/* Indicadores */
+.c-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.indicator.active {
+  background: white;
+  width: 30px;
+  border-radius: 6px;
+}

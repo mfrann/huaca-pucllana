@@ -1,0 +1,155 @@
+.f-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #242424;
+  padding: 75px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.f-container-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: justify;
+  gap: clamp(2rem, 8vw, 11.25rem);
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.f-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex: 1;
+  min-width: 280px;
+}
+
+.f-info h1,
+.f-info p {
+  font-family: "Satoshi", sans-serif;
+  color: #ffffff;
+  margin: 0;
+}
+
+.f-info h1 {
+  font-weight: 400;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+}
+
+.f-info p {
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+}
+
+.f-container-ruc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding: 1.25rem 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.f-container-ruc p {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.f-container-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 5px;
+  margin-top: 12px;
+}
+
+.f-container-social p {
+  font-size: clamp(0.75rem, 2vw, 0.8125rem);
+  margin: 0;
+  color: #ffffff;
+}
+
+.f-social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.f-social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+}
+
+.f-social-media a:hover {
+  background: white;
+  color: #242424;
+}
+
+@media (max-width: 992px) {
+  .f-container-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .f-info {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .f-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .f-container-social {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .f-social-media {
+    order: -1;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .f-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .f-container-info {
+    gap: 2rem;
+  }
+
+  .f-social-media a {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1rem;
+  }
+}
