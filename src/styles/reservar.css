@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center; /* Siempre centrado */
-  background: url("../public/assets/bg-huaca.avif") center/cover no-repeat;
+  background: url("/assets/bg-huaca.avif") center/cover no-repeat;
   min-height: 100dvh; /* Altura dinámica (mejor en móviles) */
   height: 100vh;
   overflow: hidden;

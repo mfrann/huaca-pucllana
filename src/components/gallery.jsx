@@ -7,7 +7,7 @@ export function Gallery() {
   const { ref } = useScrollAnimation();
 
   const goLink = () => {
-    window.open("../public/assets/docs/carta.pdf");
+    window.open("/assets/docs/carta.pdf");
   };
   return (
     <section id="galeria">
@@ -21,42 +21,42 @@ export function Gallery() {
         <div ref={ref} className="g-container-img animate-on-scroll delay-1">
           <img
             className="g-i s-1x2"
-            src="../public/assets/dishes/3.avif"
+            src="/assets/dishes/3.avif"
             alt="plato 3"
           />
           <img
             className="g-i s-1x2"
-            src="../public/assets/dishes/4.avif"
+            src="/assets/dishes/4.avif"
             alt="plato 4"
           />
           <img
             className="g-i s-1x2"
-            src="../public/assets/dishes/5.avif"
+            src="/assets/dishes/5.avif"
             alt="plato 5"
           />
           <img
             className="g-i s-1x2"
-            src="../public/assets/dishes/6.avif"
+            src="/assets/dishes/6.avif"
             alt="plato 6"
           />
           <img
             className="g-i s-1x2"
-            src="../public/assets/dishes/7.avif"
+            src="/assets/dishes/7.avif"
             alt="plato 7"
           />
           <img
             className="g-i s-1x2"
-            src="../public/assets/dishes/8.avif"
+            src="/assets/dishes/8.avif"
             alt="plato 8"
           />
           <img
             className="g-i s-1x2"
-            src="../public/assets/dishes/9.avif"
+            src="/assets/dishes/9.avif"
             alt="plato 9"
           />
           <img
             className="g-i s-1x2"
-            src="../public/assets/dishes/11.avif"
+            src="/assets/dishes/11.avif"
             alt="plato 11"
           />
         </div>

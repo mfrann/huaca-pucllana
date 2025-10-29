@@ -32,7 +32,7 @@ export function Header() {
           </a>
 
           <a
-            href="/public/assets/docs/carta.pdf"
+            href="/assets/docs/carta.pdf"
             target="_blank"
             onClick={() => setOpen(false)}
           >

@@ -1,6 +1,5 @@
-import myImg2 from "/public/assets/huaca.jpg";
-import myImg from "/public/assets/dishes/7.avif";
-import { FaArrowRight } from "react-icons/fa";
+import myImg2 from "/assets/huaca.jpg";
+import myImg from "/assets/dishes/7.avif";
 import { useScrollAnimation } from "./animation";
 
 import "@/styles/nosotros.css";
