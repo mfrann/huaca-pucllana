@@ -1,4 +1,4 @@
-import "/styles/reservar.css";
+import "@/styles/reservar.css";
 import { FaCalendarAlt, FaUserAlt, FaClock } from "react-icons/fa";
 import { useScrollAnimation } from "./animation";
 

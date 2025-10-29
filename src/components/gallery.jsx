@@ -1,4 +1,4 @@
-import "/styles/gallery.css";
+import "@/styles/gallery.css";
 import { FaArrowRight } from "react-icons/fa";
 import { Carousel } from "./carrusel";
 import { useScrollAnimation } from "./animation";

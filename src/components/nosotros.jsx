@@ -3,7 +3,7 @@ import myImg from "/public/assets/dishes/7.avif";
 import { FaArrowRight } from "react-icons/fa";
 import { useScrollAnimation } from "./animation";
 
-import "../styles/nosotros.css";
+import "@/styles/nosotros.css";
 
 export function Nosotros() {
   const { ref } = useScrollAnimation();

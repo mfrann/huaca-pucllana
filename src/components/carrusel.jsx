@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/carrusel.css";
+import "@/styles/carrusel.css";
 
 const images = [
   "/public/assets/dishes/3.avif",
