@@ -25,14 +25,14 @@ export function Header() {
     <section className="h-main-container">
       <div className="overlay"></div>
       <header className={`h-container ${scrolled ? "scrolled" : ""}`}>
-        <img src="../public/assets/logo.png" alt="" />
+        <img src="/public/assets/logo.png" alt="" />
         <nav className={`h-navbar ${open ? "active" : ""}`}>
           <a href="#name" onClick={() => setOpen(false)}>
             NOSOTROS
           </a>
 
           <a
-            href="../public/assets/docs/carta.pdf"
+            href="/public/assets/docs/carta.pdf"
             target="_blank"
             onClick={() => setOpen(false)}
           >
