@@ -1,4 +1,4 @@
-import "../styles/header.css";
+import "/styles/header.css";
 import { FaAngleDown, FaBars, FaTimes } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
